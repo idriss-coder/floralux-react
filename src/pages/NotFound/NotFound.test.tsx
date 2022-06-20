@@ -1,13 +1,14 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable import/extensions */
 import React from "react";
 import { render, screen } from "@testing-library/react";
 // eslint-disable-next-line import/no-unresolved
-import App from "./App";
+import NotFound from './NotFound';
 
 // eslint-disable-next-line no-undef
-test("renders floralux text", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/floralux/i);
+test("renders error", () => {
+  render(<NotFound />);
+  const textElement = screen.getByText(/404/i);
   // eslint-disable-next-line no-undef
-  expect(linkElement).toBeInTheDocument();
+  expect(textElement).toBeInTheDocument();
 });

@@ -1,12 +1,16 @@
+/* eslint-disable import/no-unresolved */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import { Provider } from "react-redux";
-import store from "./redux/store";
-
+// eslint-disable-next-line import/extensions
 import App from "./App";
+
+// eslint-disable-next-line import/extensions
 import reportWebVitals from "./reportWebVitals";
+// eslint-disable-next-line import/extensions
+import store from "./redux/store";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
