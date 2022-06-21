@@ -1,0 +1,12 @@
+@import "./../../constants/spacing.scss";
+
+.container{
+    max-width: 800px;
+    margin: auto $marginLR;
+}
+
+@media only screen and (min-width: 520px){
+    .container{
+        margin: auto;
+    }
+}

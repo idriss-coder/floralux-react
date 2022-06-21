@@ -2,10 +2,11 @@
 /* eslint-disable import/extensions */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
+import { Typography } from "@mui/material";
 import "./Typo.css"
 
-export function Title1({children}:any, props:any) {
-  return <h1 className="title1" {...props}>{children}</h1>;
+export function Title1({children}:any) {
+  return <Typography variant="h5" component="h2">{children}</Typography>
 }
 
 export function Title2({children}:any, props:any) {

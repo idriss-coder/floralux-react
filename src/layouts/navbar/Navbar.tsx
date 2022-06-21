@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/extensions */
 import React from "react";
-import "./Navbar.css"
+import "./Navbar.scss"
 // eslint-disable-next-line import/no-unresolved
 import Menu from './components/Menu';
 // eslint-disable-next-line import/no-unresolved

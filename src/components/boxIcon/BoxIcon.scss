@@ -1,0 +1,14 @@
+@import "./../../constants/couleur.scss";
+
+.icon{
+    background: $tertiary;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}

@@ -14,7 +14,7 @@ export default function Page({title, children}:any) {
 
     return (
         <div className="page">
-        {children}
+            {children}
         </div>
     );
 }
