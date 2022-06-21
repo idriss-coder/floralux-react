@@ -1,21 +1,20 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable import/extensions */
 import React from "react";
-import { Link } from "react-router-dom";
+import "./Navbar.css"
+// eslint-disable-next-line import/no-unresolved
+import Menu from './components/Menu';
+// eslint-disable-next-line import/no-unresolved
+import User from './components/User';
+// eslint-disable-next-line import/no-unresolved
+import Cart from './components/Cart';
 
 export default function Navbar() {
   return (
-        <nav>
-          <ul>
-            <li>
-              Floralux
-            </li>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/articles">Articles</Link>
-            </li>
-          </ul>
+        <nav className="navbar">
+          <Menu />
+          <User />
+          <Cart />
         </nav>
   );
 }

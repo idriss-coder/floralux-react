@@ -1,14 +1,16 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import React from "react";
-// eslint-disable-next-line import/no-unresolved
 import Page from "../../components/page/Page";
+import Welcome from './components/welcome/Welcome';
+import Search from './components/search/Search';
 
 export default function Store() {
   return (
     <Page title="App de vente en ligne">
-      <h1>Vos articles</h1>
-      <p>Bienvenu sur votre app de vente</p>
+      <Welcome />
+      <Search />
     </Page>
   );
 }

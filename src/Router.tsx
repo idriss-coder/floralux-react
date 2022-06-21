@@ -21,14 +21,12 @@ export default function AppRouter() {
     <div>
         <Navbar />
          <Suspense fallback={<Loading />}>
-            <div className="body" style={{padding:"20px", background:"red"}}>
               <Routes>
                 <Route path="/" element={<Store />} />
                 <Route path="/articles" element={<Articles />} />
                 <Route path="/404" element={<NotFound />} />
                 <Route path="*" element={<Navigate to="/404" />} />
               </Routes>
-            </div>
         </Suspense>
     </div>
   );

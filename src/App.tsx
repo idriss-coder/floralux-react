@@ -5,12 +5,15 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 // eslint-disable-next-line import/no-unresolved
 import AppRouter from "./Router";
+import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </div>
   );
 }
 

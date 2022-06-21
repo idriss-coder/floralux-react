@@ -1,0 +1,35 @@
+.title1{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1d2424;
+    line-height: 25px;
+    padding: 5px 0px !important;
+    margin: 0 !important;
+}
+
+.title2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1d2424;
+    line-height: 25px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.title3{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1d2424;
+    line-height: 25px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #303636;
+    line-height: 25px;
+    padding: 5px 0px !important;
+    margin: 0 !important;
+}
