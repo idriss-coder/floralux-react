@@ -7,6 +7,7 @@ import Welcome from './components/welcome/Welcome';
 import Search from './components/search/Search';
 import Box from "../../components/box/Box";
 import Banner from './components/Banner/Banner';
+import Categorys from './components/categorys/Categorys';
 
 export default function Store() {
   return (
@@ -19,7 +20,8 @@ export default function Store() {
       </Box>  
       <Box mb={20}>
         <Banner />
-      </Box>  
+      </Box>
+      <Categorys />  
     </Page>
   );
 }

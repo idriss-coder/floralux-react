@@ -13,15 +13,15 @@
 }
 
 .banner-img{
-    width: 250px;
-    height: auto;
+    width: auto;
+    height: 200px;
     position: absolute;
-    bottom: -50px;
+    bottom: -10px;
     right: -$marginLR;
 }
 
 @media only screen and (min-width: 500px){
     .banner-img{
-         width: 350px;
+         height: 270px;
     };
 }

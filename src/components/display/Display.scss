@@ -1,0 +1,33 @@
+@import "../../constants/couleur.scss";
+
+.display{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .display-head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .link{
+            *{
+                font-weight: 400;
+                text-decoration: none;
+                color: $primary;
+                transition: linear all 300ms;
+                &:hover{
+                    color: darken($color: $primary, $amount: 20);
+                }
+            }
+        }
+    }
+
+    .categorys-content{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+    }
+
+}
