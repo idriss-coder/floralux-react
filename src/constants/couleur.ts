@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 const couleurs = {
-  primary: "#FF5070",
-  secodary: "#37562d",
+  primary: "#37562d",
+  secodary: "#FF5070",
   tertiary: "#f2bb44"
 };
 

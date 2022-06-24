@@ -7,7 +7,7 @@ function Message({title, subtitle}:any, props:any) {
   return (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <div className="message" {...props}>
-    <Typography variant="h4">{title}</Typography>
+    <Typography variant="h3" component="h1">{title}</Typography>
     <Typography variant="subtitle1">{subtitle}</Typography>
   </div>
   );

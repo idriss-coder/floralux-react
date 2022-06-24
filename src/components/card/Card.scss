@@ -1,0 +1,120 @@
+@import "../../constants/spacing.scss";
+@import "../../constants/couleur.scss";
+
+
+@keyframes showSlowly{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes hideSlowly{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.card{
+    //border: solid 2px #ddd;
+    background: rgb(255, 255, 255);
+    border-radius: $radius;
+    width: calc((100% / 2) - $element-spacing);
+    max-width: calc(100% / 2);
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: auto;
+    transition: all linear 300ms;
+    box-shadow: rgb(0 0 0 / 5%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 7%) 0px 1px 5px 0px;
+    .add{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    .second{
+        display: none;
+        animation: hideSlowly 300ms 1;
+    }
+
+    .first{
+        display: block;
+        animation: showSlowly 500ms 1;
+    }
+
+    .thumbnail{
+         max-height: 400px;
+         position: relative;
+    }
+
+    &:hover, &:focus{
+        background: darken($color: #fff, $amount: 4);
+        .second{
+            display: block;
+    }
+
+        .first{
+            display: none;
+        }
+    }
+
+    .image{
+        height: 100%;
+        min-height: 250px;
+        border-radius: $radius $radius 0 0;
+        transition: all linear 300ms;
+
+        &:hover, &:focus{
+            transform: scale(1.02);
+        }
+        
+    }
+
+    *{
+        text-decoration: none;
+    }
+
+    .content{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .ctg{
+            font-size: 18px;
+            color: rgb(167, 176, 174);
+            font-weight: 400;
+        }
+        .title{
+            font-size: calc(0.7 * 1.2rem);
+            font-weight: 500;
+            color: rgb(0 0 0 / 85%) !important;
+        }
+        .price{
+            margin-top: 10px;
+            color: #1d2424;
+            font-size: 1.4rem;
+            letter-spacing: .07rem;
+            font-weight: 700;
+        }
+
+    }
+}
+
+@media only screen and (min-width: 750px){
+    .card{
+        max-width: calc((100% / 3) - ($element-spacing * 2));
+    }
+}
+
+@media only screen and (min-width: 990px){
+    .card{
+        max-width: calc((100% / 4) - ($element-spacing * 3));
+    }
+}

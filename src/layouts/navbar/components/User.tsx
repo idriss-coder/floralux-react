@@ -3,7 +3,12 @@
 import React from "react";
 
 function User() {
-  return <div>Delivery to</div>;
+  const floraluxDesign = {
+    fontSize: "20px",
+    fontWeight: "600",
+  }
+
+  return <div style={floraluxDesign}>Floralux</div>;
 }
 
 export default User;

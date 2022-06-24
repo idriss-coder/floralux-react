@@ -1,3 +1,5 @@
+@import "../../../../../../constants/couleur.scss";
+
 .category{
     background: #ddd;
     border-radius: 200px;
@@ -29,4 +31,9 @@
 .link{
     text-decoration: none;
     color: #1d2424;
+}
+
+.active{
+    background: $primary;
+    color: white;
 }

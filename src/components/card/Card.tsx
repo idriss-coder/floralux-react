@@ -3,24 +3,54 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-undef */
 import React from "react";
-import {Typography} from "@mui/material";
 import { Link } from 'react-router-dom';
+
 import { CardProps } from "../../interfaces/componentsProps";
 import "./Card.scss"
+import AddWishList from "../addWishList/AddWithList";
 
-function Card({title, link, ctg, image, price}:CardProps): JSX.Element {
-  return <Link to={link}>
-            <div className="card">
-                <div className="image">
-                    <img src={image} alt={title} />
-                </div>
-                <div className="content">
-                    <div className="ctg">{ctg}</div>
-                    <div className="title">{title}</div>
-                    <div className="price">{price.toString()}</div>
-                </div>
+function Card({title, link, ctg, image, simage="", price}:CardProps): JSX.Element {
+
+    const imageStyle = {
+        background: `url(${image}) no-repeat`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+
+    }
+
+    const imageStyle2 = {
+        background: `url(${simage}) no-repeat`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+
+    }
+
+    const titleStyle = {
+        color: "#1d2424",
+        fontWeight: "500",
+    }
+
+  return <div className="card">
+                <Link to={link}>
+                    <div className="thumbnail">
+                        <div className="image first" style={imageStyle} title={ctg} />
+                        <div className="image second" style={imageStyle2} title={ctg} />
+                        <div className="add">
+                            <AddWishList />
+                        </div>
+                    </div>
+                    <div className="content">
+                        <div>
+                            <div className="title" style={titleStyle}>
+                                {title}
+                            </div>
+                        </div>
+                        <div className="price">{price.toString()} FCFA</div>
+                    </div>
+                </Link>
             </div>
-        </Link>
 }
 
 export default Card;

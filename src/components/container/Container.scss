@@ -1,7 +1,20 @@
 @import "./../../constants/spacing.scss";
+@import "./../../constants/spacing.scss";
 
 .container{
-    max-width: 800px;
+    max-width: 1100px;
+    margin: auto $marginLR;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 520px){
+    .container{
+        margin: auto;
+    }
+}
+
+.container{
+    max-width: 1100px;
     margin: auto $marginLR;
 }
 

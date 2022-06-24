@@ -1,24 +1,51 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { orange } from "@mui/material/colors";
 import "./index.css";
 
 import { Provider } from "react-redux";
-// eslint-disable-next-line import/extensions
 import App from "./App";
 
-// eslint-disable-next-line import/extensions
 import reportWebVitals from "./reportWebVitals";
-// eslint-disable-next-line import/extensions
+
 import store from "./redux/store";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+declare module "@mui/material/styles" {
+  interface Theme {
+    status: {
+      danger: string;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    status?: {
+      danger?: string;
+    };
+  }
+}
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: orange[500],
+    },
+  },
+});
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );

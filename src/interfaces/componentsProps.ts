@@ -19,13 +19,16 @@ export interface ContainerProps {
 export interface DisplayProps{
   title: String;
   link: LinkProps["to"];
-  children: JSX.Element | JSX.Element[]
+  children: JSX.Element | JSX.Element[];
+  wrap?: Boolean;
+  nodesc?: Boolean
 }
 
 export interface CategoryProps{
   title: string;
   img: string;
-  link: LinkProps["to"]
+  link: LinkProps["to"];
+  active?: Boolean
 }
 
 export interface CategorysProps{
@@ -35,7 +38,12 @@ export interface CategorysProps{
 export interface CardProps{
   title: string;
   link: LinkProps["to"];
-  ctg: String;
+  ctg: string;
   image: string;
+  simage?: string;
   price: Number
+}
+
+export interface CardsProps{
+  nodesc?: Boolean;
 }

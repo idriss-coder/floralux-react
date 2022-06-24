@@ -6,15 +6,17 @@ import "./Categorys.scss"
 import Box from "../../../../components/box/Box";
 import Display from "../../../../components/display/Display";
 import Category from './components/category/Category';
-
+import demoCtg from "../../../../assets/illustration/demo-ctg.jpg"
 
 function Categorys() {
-  return <Box mb={20} mt={20}>
+  return <Box mt={60} mb={-50}>
     <Display title="Categories" link="/">
-        <Category title="Fleur" img="http://localhost:3000/static/media/bouquet-illus.815f5d9c3346985f457e.png" link="/fleur" />
-        <Category title="Fleur" img="http://localhost:3000/static/media/bouquet-illus.815f5d9c3346985f457e.png" link="/fleur" />
-        <Category title="Fleur" img="http://localhost:3000/static/media/bouquet-illus.815f5d9c3346985f457e.png" link="/fleur" />
-        <Category title="Fleur" img="http://localhost:3000/static/media/bouquet-illus.815f5d9c3346985f457e.png" link="/fleur" />
+        <Category title="Fleur" img={demoCtg} link="/fleur" active/>
+        <Category title="Fleur" img={demoCtg} link="/fleur" />
+        <Category title="Fleur" img={demoCtg} link="/fleur" />
+        <Category title="Fleur" img={demoCtg} link="/fleur" />
+        <Category title="Fleur" img={demoCtg} link="/fleur" />
+        <Category title="Fleur" img={demoCtg} link="/fleur" />
     </Display>
   </Box>
 }
