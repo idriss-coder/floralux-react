@@ -14,6 +14,8 @@ const Store  = lazy(() => import("./pages/store/Store"));
 // eslint-disable-next-line import/no-unresolved
 const Articles = lazy(() => import("./pages/articles/Articles"));
 // eslint-disable-next-line import/no-unresolved
+const Article = lazy(() => import("./pages/article/Article"));
+// eslint-disable-next-line import/no-unresolved
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 export default function AppRouter() {
@@ -24,6 +26,7 @@ export default function AppRouter() {
               <Routes>
                 <Route path="/" element={<Store />} />
                 <Route path="/articles" element={<Articles />} />
+                <Route path="/articles/:id" element={<Article />} />
                 <Route path="/404" element={<NotFound />} />
                 <Route path="*" element={<Navigate to="/404" />} />
               </Routes>

@@ -9,6 +9,7 @@ import Box from "../../components/box/Box";
 import Banner from './components/Banner/Banner';
 import Cards from "../../components/Cards/Cards";
 import CtgCards from "../../components/ctgCards/CtgCards";
+import articlesData from "../../mooks/articlesData";
 
 export default function Store() {
   return (
@@ -23,7 +24,7 @@ export default function Store() {
         <Banner />
       </Box>
       <CtgCards /> 
-      <Cards />
+      <Cards title="Articles recents" data={articlesData} link="/articles" />
     </Page>
   );
 }

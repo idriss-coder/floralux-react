@@ -1,7 +1,9 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/extensions */
 import React from "react";
-import {MenuOutlined} from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import { MenuOutlined } from "@mui/icons-material";
+import { Stack } from "@mui/material"
 // eslint-disable-next-line import/no-unresolved
 import BoxIcon from "../../../components/boxIcon/BoxIcon";
 import "./Menu.scss";
@@ -28,11 +30,11 @@ function Menu() {
   return <div className="menu">
     <div className="menu-btn">
         <BoxIcon handleClick={()=>handleToggleMenu} color="transparent" contentColor="#1d2424">
-          <MenuOutlined />
+          <Stack direction="row" className="justify">
+             <MenuOutlined />
+             <Link to="/" className="link">Floralux</Link>
+          </Stack>
         </BoxIcon>
-    </div>
-    <div className="menu-container">
-      <MainMenu/>
     </div>
   </div>
 }

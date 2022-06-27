@@ -5,12 +5,14 @@ import React from "react";
 import Cards from "../Cards/Cards";
 // eslint-disable-next-line import/no-unresolved
 import Categorys from "../../pages/store/components/categorys/Categorys";
+// eslint-disable-next-line import/no-unresolved
+import articlesData, { ctgData } from "../../mooks/articlesData";
 
 function CtgCards() {
 
   return <div>
-    <Categorys />
-    <Cards nodesc/>
+    <Categorys data={ctgData} />
+    <Cards nodesc data={articlesData}/>
   </div>;
 }
 

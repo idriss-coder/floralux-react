@@ -1,8 +1,11 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 
 import { MouseEventHandler } from "react";
 import { LinkProps } from "react-router-dom";
+import { articleProps, ctgProps } from './dataProps';
 
 export interface BoxIconProps {
   children: JSX.Element,
@@ -16,12 +19,12 @@ export interface ContainerProps {
   children: JSX.Element
 }
 
-export interface DisplayProps{
+export interface DisplayProps {
   title: String;
   link: LinkProps["to"];
   children: JSX.Element | JSX.Element[];
   wrap?: Boolean;
-  nodesc?: Boolean
+  nodesc?: Boolean;
 }
 
 export interface CategoryProps{
@@ -32,7 +35,7 @@ export interface CategoryProps{
 }
 
 export interface CategorysProps{
-  children: JSX.Element | JSX.Element[]
+  data: Array<ctgProps>
 }
 
 export interface CardProps{
@@ -44,6 +47,10 @@ export interface CardProps{
   price: Number
 }
 
-export interface CardsProps{
+export interface CardsProps {
   nodesc?: Boolean;
+  wrap?: Boolean;
+  data: Array<articleProps>;
+  title?: string;
+  link?: LinkProps["to"];
 }
