@@ -4,6 +4,7 @@ import React from "react";
 import {MenuOutlined} from "@mui/icons-material";
 // eslint-disable-next-line import/no-unresolved
 import BoxIcon from "../../../components/boxIcon/BoxIcon";
+import "./Menu.scss";
 
 export function MainMenu() {
   return <div className="mainMenu">
@@ -24,9 +25,16 @@ export function MainMenu() {
 
 function Menu() {
   const handleToggleMenu = () => {}
-  return <BoxIcon handleClick={()=>handleToggleMenu} color="transparent" contentColor="#1d2424">
-    <MenuOutlined />
-  </BoxIcon>
+  return <div className="menu">
+    <div className="menu-btn">
+        <BoxIcon handleClick={()=>handleToggleMenu} color="transparent" contentColor="#1d2424">
+          <MenuOutlined />
+        </BoxIcon>
+    </div>
+    <div className="menu-container">
+      <MainMenu/>
+    </div>
+  </div>
 }
 
-export default Menu;
+export default Menu
