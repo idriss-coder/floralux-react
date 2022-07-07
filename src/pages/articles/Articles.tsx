@@ -13,9 +13,16 @@ import Container from "../../components/container/Container";
 export default function Articles() {
     const [articles, setArticles] = useState([]);
     useEffect(() => {
+      const url = `${env.apiUlr}articles`; 
       axios
-        .get(`${env.apiUlr}articles`)
-        .then((res) => setArticles(res.data.articles));
+        .get(url)
+        .then((res) => {
+          // eslint-disable-next-line no-console
+          console.log(res.data.articles);
+          // eslint-disable-next-line no-console
+          console.log(url);
+          setArticles(res.data.articles);
+        });
     },[]);
   return (
     <Page title="Vos articles">

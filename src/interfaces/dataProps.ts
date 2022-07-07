@@ -14,7 +14,7 @@ export interface articleProps {
 }
 
 export interface ctgProps {
-  id: Number;
+  id: number;
   title: string;
   slug: string;
   image: string;

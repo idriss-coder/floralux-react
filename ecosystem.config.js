@@ -1,19 +1,16 @@
 module.exports = {
   apps : [{
-    script: 'index.js',
+    script: 'bin/www',
     watch: '.'
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
   }],
 
   deploy : {
     production : {
-      user : 'SSH_USERNAME',
-      host : 'SSH_HOSTMACHINE',
+      user: 'aysfishh117',
+      host: '78.46.11.32',
       ref  : 'origin/master',
-      repo : 'GIT_REPOSITORY',
-      path : 'DESTINATION_PATH',
+      repo: 'https://github.com/IDRISSHACKER/floraluxapi.git',
+      path: '/var/www/floralux.guihon.cm',
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''

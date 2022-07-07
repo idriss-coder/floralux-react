@@ -16,7 +16,7 @@ function Categorys({data}:CategorysProps):JSX.Element {
     <Box mt={60} mb={-50}>
       <Display title="Categories" link="/articles">
         {data.map((ctg:ctgProps) => (
-          <Category title={ctg.title} img={ctg.image} link={ctg.slug} active = {ctg.id === 1}  />
+          <Category key={ctg.id} title={ctg.title} img={ctg.image} link={ctg.slug} active = {ctg.id === 1}  />
         ))}
       </Display>
     </Box>
