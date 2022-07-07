@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 
 export interface articleProps {
-  id: Number;
+  id: number;
   title: string;
   slug: string;
   image: string;
@@ -20,5 +20,6 @@ export interface ctgProps {
   image: string;
   articleQtt: Number;
 }
+
 
 

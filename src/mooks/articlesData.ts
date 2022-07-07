@@ -30,6 +30,17 @@ const articlesData: Array<articleProps> = [
     description: "lorem ipsum",
     qtt: 12,
   },
+  {
+    id: 3,
+    title: "Superbe fleur",
+    slug: "superbe-fleur",
+    image: demo2,
+    galery: [demo],
+    price: 1900,
+    ctg: "Rose",
+    description: "lorem ipsum",
+    qtt: 12,
+  },
 ];
 
 export const ctgData: Array<ctgProps> = [

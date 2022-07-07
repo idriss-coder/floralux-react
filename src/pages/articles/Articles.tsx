@@ -1,17 +1,28 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/extensions */
-import React,{} from "react";
-// eslint-disable-next-line import/no-unresolved
+/* eslint-disable import/no-unresolved */
+import React,{useState, useEffect} from "react";
+import axios from "axios"
+import { Typography } from '@mui/material';
 import Cards from "../../components/Cards/Cards";
-// eslint-disable-next-line import/no-unresolved
 import Page from "../../components/page/Page";
-// eslint-disable-next-line import/no-unresolved
-import articlesData from "../../mooks/articlesData";
+// import articlesData from "../../mooks/articlesData";
+import env from "../../constants/env";
+import Container from "../../components/container/Container";
 
 export default function Articles() {
+    const [articles, setArticles] = useState([]);
+    useEffect(() => {
+      axios
+        .get(`${env.apiUlr}articles`)
+        .then((res) => setArticles(res.data.articles));
+    },[]);
   return (
     <Page title="Vos articles">
-      <Cards wrap nodesc data={articlesData}/>
+      <Container>
+        <Typography variant="h4" component="h1">Articles</Typography>  
+      </Container>  
+      <Cards wrap nodesc data={articles}/>
     </Page>
   );
 }

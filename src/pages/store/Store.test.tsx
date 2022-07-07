@@ -8,7 +8,7 @@ import Store from './Store';
 // eslint-disable-next-line no-undef
 test("say welcome", () => {
   render(<Store />);
-  const textElement = screen.getByText(/bienvenu/i);
+  const textElement = screen.getByText(/Bienvenue/gi);
   // eslint-disable-next-line no-undef
   expect(textElement).toBeInTheDocument();
 });
