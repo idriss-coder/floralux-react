@@ -21,7 +21,7 @@ function Cards({nodesc = false, wrap=false, data, title="", link="/"}:CardsProps
               key={article.id}
               title={article.title}
               image={article.image}
-              simage={article.galery[0]}
+              simage={article.image}
               link={`/articles/${article.slug}`}
               ctg={article.ctg}
               price={article.price}
