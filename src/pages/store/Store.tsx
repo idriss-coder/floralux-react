@@ -31,7 +31,7 @@ export default function Store() {
         <Banner />
       </Box>
       <CtgCards /> 
-      <Cards title="Articles recents" data={articles} link="/articles" />
+      <Cards title="Articles recents >" data={articles} link="/articles" />
     </Page>
   );
 }
