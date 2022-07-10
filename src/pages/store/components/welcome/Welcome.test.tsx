@@ -3,12 +3,12 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 // eslint-disable-next-line import/no-unresolved
-import Store from './Store';
+import Welcome from './Welcome';
 
 // eslint-disable-next-line no-undef
 test("say welcome", () => {
-  render(<Store />);
-  const textElement = screen.getByText(/Bienvenue/gi);
+  render(<Welcome />);
+  const textElement = screen.getByText(/bienvenue/i);
   // eslint-disable-next-line no-undef
   expect(textElement).toBeInTheDocument();
 });

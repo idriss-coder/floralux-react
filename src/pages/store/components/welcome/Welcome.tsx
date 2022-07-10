@@ -8,7 +8,7 @@ import Message from "../../../../components/message/Message";
 
 function Welcome() {
   return <Container>
-    <Message title="Bienvenue sur la plateforme de vente" subtitle="Effectuez vos achats en toute sécutité" />
+    <Message title="Bienvenue sur l'App de vente en ligne" subtitle="Effectuez vos achats en toute sécutité" />
   </Container>
 }
 
