@@ -1,10 +1,7 @@
 /* eslint-disable prettier/prettier */
 const env = {
-  apiUlr:
-    process.env.NODE_ENV === "production"
-      ? "https://www.example.com"
-      : "http://localhost:100/api/",
-
+  apiUlr: "http://localhost:4000/api/",
+  cdnUrl: "http://localhost:5000",
   appName: "Floralux",
   appAuthor: "IDR6IX-HACKER",
   appYear: "20022",
