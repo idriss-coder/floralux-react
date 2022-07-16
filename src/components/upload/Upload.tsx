@@ -13,10 +13,11 @@ import env from "../../constants/env"
 function Upload():JSX.Element{
     const [file, setFile] = useState("")
     const [progress, setProgress] = useState(0)
+    const [imageUrl, setImageUrl] = useState("")
 
     const cdnUrlUload = `${env.cdnUrl}/upload`;
 
-    const handlerUpload = (e:any)=>{
+    const handlerUpload = async (e:any)=>{
         e.preventDefault()
         
         const config = {
@@ -29,12 +30,12 @@ function Upload():JSX.Element{
 
         const formData = new FormData()
         formData.append("file", file)
-
-        axios
+        await axios
           .post(cdnUrlUload, formData, config)
           .then((res) => {
             // eslint-disable-next-line no-console
             console.log(res);
+            setImageUrl(`https://cdn.guihon.cm/${res.data.file}?quality=medium&compressed=true`);
           })
           // eslint-disable-next-line no-console
           .catch((err) => console.log(err));
@@ -48,7 +49,19 @@ function Upload():JSX.Element{
     return (
       <div className="upload">
         <div className="upload-container">
-          <form action="" onSubmit={handlerUpload}>
+          <TextField
+            id="outlined-basic"
+            label="Outlined"
+            variant="outlined"
+            type="text"
+            fullWidth
+            value={imageUrl}
+          />
+          <form
+            action=""
+            onSubmit={handlerUpload}
+            encType="multipart/form-data"
+          >
             <TextField
               id="outlined-basic"
               label="Outlined"
